@@ -1,0 +1,282 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --purple: #7843e9;
+}
+body {
+  font-family: Courier, sans-serif;
+  color: #556070;
+}
+header {
+  display:flex;
+  justify-content: center;
+}
+nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nav-menu {
+  padding-left: 0;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  width: 100%;
+}
+.nav-menu li{
+  list-style: none;
+  padding: 40px 20px;
+}
+.nav-menu a {
+  text-decoration: none;
+  color:#556070;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+}
+.my-pic2{
+  display: none;
+}
+.nav-menu li a:after{
+  content:"";
+  position: absolute;
+  background-color: var(--purple);
+  height: 5px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s
+}
+.nav-menu li a:hover{
+  color: black;
+  cursor: pointer;
+}
+.nav-menu li a:hover:after{
+  width: 100%;
+}
+
+/* Intro and my picture */
+main {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+.intro {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+}
+h1 {
+  font-size: 40px;
+  color: black;
+  margin-bottom: 30px;
+}
+h2 {
+  border-bottom: 5px solid var(--purple);
+  display:inline-block;
+  margin: 0 0 20px 20px;
+}
+.box1 {
+  flex: 1;
+  padding-left: 20px;
+}
+.box2 {
+  flex: 1;
+}
+.box2 h2{
+  border-bottom: none;
+  color: var(--purple);
+}
+
+/* for all sections */
+#aboutMe, #skills, #projects, #education, #language, #contact, #code {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+/* About me section*/
+p{
+  text-align: justify;
+  line-height: 40px;
+  margin: 0 20px;
+}
+
+/* Skills */
+.skills-box{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 40px 20px 20px 20px;
+  flex-wrap: wrap;
+}
+.skill-item{
+  width: 100px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+}
+
+/* projects section */
+.projects-box{
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  row-gap: 40px;
+}
+.project-item {
+  width: 370px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  color: white;
+  font-size: 20px;
+  padding: 10px 0;
+}
+.project-item a{
+  color: white;
+}
+.project-item a:hover{
+  color: var(--purple)
+}
+.poke {
+  background: url('images/flat-lay-assortment-delicious-poke-bowl.jpg');
+  background-size:cover;
+}
+.clinic {
+  background: url('images/wepik-export-20230713160934iRvZ.png');
+  background-size: cover;
+}
+.tips{
+  background: url('images/photo.jpg');
+  background-size: cover;
+}
+.todo {
+  background: url('images/priscilla-du-preez-6tCiSN8LX7w-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.weather {
+  background: url('images/weather.png');
+  background-size: cover;
+}
+.christmas{
+  background: url('images/aaron-burden-Mu_9w7l1koI-unsplash.jpg');
+  background-size: cover;
+}
+/* contacts section */
+ul {
+  padding-left: 40px;
+  line-height: 40px;
+}
+#contact a {
+  text-decoration: none;
+  color:#556070;
+}
+#contact a:hover{
+  color: var(--purple);
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  background-color: #556070;
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.footer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.link, h5 {
+  padding: 40px 20px;
+}
+.link:hover{
+  transform: scale(1.2);
+}
+@media all and (max-width: 800px){
+  .nav-menu a{
+    font-size: 16px;
+  }
+  .my-pic{
+    width: 150px;
+  }
+  h1{
+    font-size: 32px;
+  }
+  h2{
+    font-size: 24px;
+  }
+  #aboutMe, #skills, #education, #language, #contact, #code{
+    padding: 20px 0;
+  }
+}
+@media all and (max-width: 540px){
+  .my-pic2{
+    display:block;
+    margin: 10px;
+  }
+  nav{
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-menu{
+    flex-direction: column;
+    align-items: end;
+    margin-right: 20px;
+  }
+  .nav-menu li{
+    padding: 0;
+    margin-left: 20px;
+    line-height: 26px;
+  }
+  .intro{
+    width: 90%;
+    padding: 20px 0;
+  }
+  .my-pic{
+    display: none;
+  }
+  .box1{
+    display: none;
+  }
+  .box2{
+    text-align: center;
+  }
+  h1{
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  .box2 h2{
+    margin:0;
+  }
+  p{
+    line-height: 30px;
+  }
+  ul {
+    line-height: 30px;
+  }
+}
